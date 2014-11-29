@@ -17,14 +17,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="neko.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="94k-3f-7GE">
-                                <rect key="frame" x="55" y="255" width="211" height="176"/>
+                                <rect key="frame" x="145" y="20" width="93" height="173"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hand.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Te-MAT">
+                                <rect key="frame" x="128" y="14" width="127" height="230"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="赤.png" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-d2-mVO">
+                                <rect key="frame" x="108" y="117" width="154" height="138"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="a" destination="94k-3f-7GE" id="Lb2-yn-hLB"/>
+                        <outlet property="cat" destination="94k-3f-7GE" id="Idt-bq-1yO"/>
+                        <outlet property="gu" destination="z8K-Te-MAT" id="sHY-Or-ts5"/>
+                        <outlet property="red" destination="gAQ-d2-mVO" id="8gK-yw-ZJ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -32,6 +40,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hand.jpg" width="237" height="348"/>
         <image name="neko.jpg" width="259" height="194"/>
+        <image name="赤.png" width="225" height="225"/>
     </resources>
 </document>

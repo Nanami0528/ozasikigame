@@ -11,7 +11,10 @@
 @interface ViewController : UIViewController
 {
     
-    IBOutlet UIImageView*a;
+    IBOutlet UIImageView*cat;
+    IBOutlet UIImageView*gu;
+    IBOutlet UIImageView*red;
+
     
 }
 

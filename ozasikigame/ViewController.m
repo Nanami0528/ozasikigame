@@ -22,28 +22,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    count = 1;
+    cat.hidden=YES;
+    gu.hidden=YES;
+    red.hidden = NO;
+    
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(time:)
                                            userInfo:nil
                                             repeats:YES];
-    count = 0;
 }
 
 -(void)time:(NSTimer*)timer{
     count += 1;
     NSLog(@"time:%d", count);
-
-if (count%3==0) {
-    a.hidden = YES; // 非表示になる。
-}else{
-
-    a.hidden = NO; // 見えるようになる。
+    
+    if (count%4 == 0) {
+        cat.hidden = YES; // 非表示になる。
+        gu.hidden = NO;
+        NSLog(@"1");
+        
+    }else if(count%4==1){
+        
+        red.hidden =YES;
+        gu.hidden = YES;
+        NSLog(@"2");
+        
+    }else if(count%2 == 0){
+        
+        cat.hidden = NO; // 見えるようになる。
+        gu.hidden = YES;
+        red.hidden = NO;
+        NSLog(@"3");
+    }else{
+        cat.hidden=YES;
+        gu.hidden=YES;
+        red.hidden = NO;
+        NSLog(@"4");
+        
+    }
+    NSLog(@"a");
     
 }
-
-    
-    }
     
     
 
