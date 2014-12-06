@@ -22,8 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+    
     count = 1;
-    cat.hidden=YES;
+    par.hidden=YES;
     gu.hidden=YES;
     red.hidden = NO;
     
@@ -32,6 +37,8 @@
                                            selector:@selector(time:)
                                            userInfo:nil
                                             repeats:YES];
+    
+  
 }
 
 -(void)time:(NSTimer*)timer{
@@ -39,8 +46,14 @@
     NSLog(@"time:%d", count);
     
     if (count%4 == 0) {
-        cat.hidden = YES; // 非表示になる。
+        par.hidden = YES; // 非表示になる。
         gu.hidden = NO;
+       
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:1];
+        gu.center = CGPointMake(160, 250);
+        [UIView commitAnimations];
+        
         NSLog(@"1");
         
     }else if(count%4==1){
@@ -51,14 +64,25 @@
         
     }else if(count%2 == 0){
         
-        cat.hidden = NO; // 見えるようになる。
+        par.hidden = NO;// 見えるようになる。
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:1];
+        par.center = CGPointMake(160, 250);
+        [UIView commitAnimations];
+        
         gu.hidden = YES;
         red.hidden = NO;
         NSLog(@"3");
     }else{
-        cat.hidden=YES;
+        par.hidden=YES;
+        
+
         gu.hidden=YES;
+        
+    
         red.hidden = NO;
+        
+        
         NSLog(@"4");
         
     }

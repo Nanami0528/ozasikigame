@@ -17,6 +17,7 @@
 		E9C1AB351A29A79600B8B0FF /* neko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AB341A29A79600B8B0FF /* neko.jpg */; };
 		E9C1AB371A29B89800B8B0FF /* Hand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AB361A29B89800B8B0FF /* Hand.jpg */; };
 		E9C1AB391A29D2A000B8B0FF /* 赤.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AB381A29D2A000B8B0FF /* 赤.png */; };
+		E9C2AD521A32E05800CF80F7 /* hand1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C2AD511A32E05800CF80F7 /* hand1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E9C1AB341A29A79600B8B0FF /* neko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neko.jpg; sourceTree = "<group>"; };
 		E9C1AB361A29B89800B8B0FF /* Hand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hand.jpg; sourceTree = "<group>"; };
 		E9C1AB381A29D2A000B8B0FF /* 赤.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "赤.png"; sourceTree = "<group>"; };
+		E9C2AD511A32E05800CF80F7 /* hand1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		E9C1AAD01A298E8100B8B0FF = {
 			isa = PBXGroup;
 			children = (
+				E9C2AD511A32E05800CF80F7 /* hand1.png */,
 				E9C1AB361A29B89800B8B0FF /* Hand.jpg */,
 				E9C1AB341A29A79600B8B0FF /* neko.jpg */,
 				E9C1AADB1A298E8100B8B0FF /* ozasikigame */,
@@ -212,6 +215,7 @@
 				E9C1AB351A29A79600B8B0FF /* neko.jpg in Resources */,
 				E9C1AAE81A298E8100B8B0FF /* Main.storyboard in Resources */,
 				E9C1AB371A29B89800B8B0FF /* Hand.jpg in Resources */,
+				E9C2AD521A32E05800CF80F7 /* hand1.png in Resources */,
 				E9C1AAED1A298E8100B8B0FF /* LaunchScreen.xib in Resources */,
 				E9C1AAEA1A298E8100B8B0FF /* Images.xcassets in Resources */,
 			);
