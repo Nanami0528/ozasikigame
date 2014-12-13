@@ -58,7 +58,7 @@
         
     }else if(count%2 == 0){
         
-        par.hidden = NO;// 見えるようになる。
+        par.hidden = NO;// 見えるようになる。　
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1];
         par.center = CGPointMake(160, 250);
