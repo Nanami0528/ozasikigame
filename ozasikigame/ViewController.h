@@ -19,5 +19,8 @@
 }
 
 
+
+-(IBAction)start;
+
 @end
 

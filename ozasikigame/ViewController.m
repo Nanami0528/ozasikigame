@@ -23,22 +23,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-    
-    
+    1;
     
     count = 1;
     par.hidden=YES;
     gu.hidden=YES;
     red.hidden = NO;
-    
-    timer = [NSTimer scheduledTimerWithTimeInterval:1
-                                             target:self
-                                           selector:@selector(time:)
-                                           userInfo:nil
-                                            repeats:YES];
-    
-  
+   
 }
 
 -(void)time:(NSTimer*)timer{
@@ -48,13 +39,16 @@
     if (count%4 == 0) {
         par.hidden = YES; // 非表示になる。
         gu.hidden = NO;
-       
+        
+        NSLog(@"1");
+        
+ 
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1];
         gu.center = CGPointMake(160, 250);
         [UIView commitAnimations];
         
-        NSLog(@"1");
+        
         
     }else if(count%4==1){
         
@@ -69,6 +63,9 @@
         [UIView setAnimationDuration:1];
         par.center = CGPointMake(160, 250);
         [UIView commitAnimations];
+        
+     
+        
         
         gu.hidden = YES;
         red.hidden = NO;
@@ -89,8 +86,19 @@
     NSLog(@"a");
     
 }
+
+
+-(IBAction)start{
     
+    timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                             target:self
+                                           selector:@selector(time:)
+                                           userInfo:nil
+                                            repeats:YES];
     
+
+    
+}
 
 
 
