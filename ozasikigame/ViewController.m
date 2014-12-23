@@ -23,6 +23,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+   
+   //タップ認識
+    UITapGestureRecognizer *tapGesture =
+    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(view_Tapped:)];
+    
+    // ビューにジェスチャーを追加（タップしたか確認のビュー）
+    [self.view addGestureRecognizer:tapGesture];
+    
+    
+ 
+    
+    
     1;
     
     count = 1;
@@ -30,7 +42,14 @@
     gu.hidden=YES;
     red.hidden = NO;
    
+    
 }
+
+- (void)view_Tapped:(UITapGestureRecognizer *)sender
+{
+    NSLog(@"タップされました．");
+}
+
 
 -(void)time:(NSTimer*)timer{
     count += 1;
@@ -42,27 +61,48 @@
         
         NSLog(@"1");
         
- 
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1];
-        gu.center = CGPointMake(160, 250);
-        [UIView commitAnimations];
         
+        
+        [UIView animateWithDuration:0.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+            gu.center = CGPointMake(160, 250);
+
+        }completion:^(BOOL finished) {
+            red.hidden =YES;
+            [UIView animateWithDuration:0.3f delay:0.2 options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                gu.center = CGPointMake(160, 50);
+            }completion:^(BOOL finished) {
+            }];
+        }];
         
         
     }else if(count%4==1){
         
-        red.hidden =YES;
+//        red.hidden =YES;
         gu.hidden = YES;
         NSLog(@"2");
         
     }else if(count%2 == 0){
         
-        par.hidden = NO;// 見えるようになる。　
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1];
-        par.center = CGPointMake(160, 250);
-        [UIView commitAnimations];
+        par.hidden = NO;// 見えるようになる。
+      
+        
+     
+        
+        
+        
+        [UIView animateWithDuration:0.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             par.center = CGPointMake(160, 250);
+                         }completion:^(BOOL finished) {
+                             [UIView animateWithDuration:0.3f delay:0.2 options:UIViewAnimationOptionCurveEaseInOut
+                                              animations:^{
+                                                  par.center = CGPointMake(160, 50);
+                                              }completion:^(BOOL finished) {
+                                              }];
+                         }];
+        
         
      
         
