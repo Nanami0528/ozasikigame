@@ -130,15 +130,19 @@
 
 -(IBAction)start{
     
+    startButton.hidden=YES;
+    
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(time:)
                                            userInfo:nil
                                             repeats:YES];
-    
 
-    
+
 }
+
+
+
 
 
 
